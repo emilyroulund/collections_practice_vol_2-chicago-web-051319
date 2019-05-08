@@ -33,7 +33,7 @@ end
 
 
 def merge_data (keys, data)
-  data[0].map do |name, hash]
+  data[0].map do |name, hash|
   new = {}
     keys.each do |info| 
       if info [:first_name] == name 
