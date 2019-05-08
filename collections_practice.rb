@@ -44,6 +44,11 @@ def merge_data(arr1, arr2)
   end
 end
 
+def merge_data (keys, data)
+  keys[0.map do |name, hash]
+    keys[0].values.map.with_index {|v, i| data[i].merge(v)}
+end
+
 #find all cool hashes
 
 def find_cool(cool)
