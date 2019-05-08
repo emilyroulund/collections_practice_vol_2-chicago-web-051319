@@ -50,6 +50,15 @@ def find_cool(cool)
   cool.select { |data| data[:temperature] == "cool" }
 end
 
+#alternative: 
+# def find_cool(array)
+#  container = []
+#  array.each do |element|
+#    container << element if element[:temperature] == "cool"
+#  end
+#  container
+# end
+
 def organize_schools
     # organizes the schools by location
 end
