@@ -44,6 +44,7 @@ def merge_data(arr1, arr2)
   end
 end
 #find all cool hashes
+
 def find_cool(cool)
   cool.select { |data| data[:temperature] == "cool" }
 end
