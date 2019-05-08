@@ -30,10 +30,19 @@ def count_elements(array)
 end
 
     # combines two nested data structures into one
-def merge_data (keys, data)
-    keys[0].values.map.with_index {|v, i| data[i].merge(v)}
-end
 
+
+def merge_data(arr1, arr2)
+  arr2[0].map do |name, prop_hash|
+    new_prop_hash = {}
+    arr1.each do |new_attr_hash|
+      if new_attr_hash[:first_name] == name
+        new_prop_hash = prop_hash.merge(new_attr_hash)
+      end
+    end
+    new_prop_hash
+  end
+end
 #find all cool hashes
 def find_cool(cool)
   cool.select { |data| data[:temperature] == "cool" }
