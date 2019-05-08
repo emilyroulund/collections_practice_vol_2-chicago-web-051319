@@ -32,21 +32,16 @@ end
     # combines two nested data structures into one
 
 
-def merge_data(arr1, arr2)
-  arr2[0].map do |name, prop_hash|
-    new_prop_hash = {}
-    arr1.each do |new_attr_hash|
-      if new_attr_hash[:first_name] == name
-        new_prop_hash = prop_hash.merge(new_attr_hash)
+def merge_data (keys, data)
+  keys[0].map do |name, hash]
+  new = {}
+    keys.each do |info| 
+      if info [:first_name] == name 
+        new = hash.merge(info)
       end
     end
-    new_prop_hash
-  end
-end
-
-def merge_data (keys, data)
-  keys[0.map do |name, hash]
-    keys[0].values.map.with_index {|v, i| data[i].merge(v)}
+new
+end 
 end
 
 #find all cool hashes
